@@ -1,7 +1,13 @@
 
-[TOC]
-
 &emsp;本地仓库的使用
+
+流程:
+1.前期准备:项目负责人在服务器或者github上创建一个空仓库 -> 开发人员提供公钥给负责人
+
+2.确定开发分支 -> 开发人员remote或者clone远程仓库到本地机器使用
+
+3.工作区(打代码)->add(暂存区)->commit(本地仓库)->push(远程仓库--推送可能需要解决冲突)
+
 
 ### 1.生成本地的公钥
 ```
@@ -15,14 +21,32 @@ git config --global user.name "fish" //设置用户名
 git config --global user.email "2874497884@qq.com" //设置邮箱
 ```
 
-### 3.初始化一个本地仓库
-&emsp;当前目录生成.git目录--记录版本等信息
+### 3.初始化仓库
+
+- 本地仓库
 ```
 git init
 ```
 
+- 服务器仓库
+&emsp;bare不会生成.git目录,主要在Linux等服务器生成一个远程仓库使用
+```
+git init -bare
+```
+
+- 在本地clone远程仓库
+```
+git clone https://github.com/fishhello/git_excample.git
+```
+
+- 使用remote关联远程仓库
+```
+git remote add github git@github.com:fishhello/git_excample.git
+```
+- [码云使用](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00150154460073692d151e784de4d718c67ce836f72c7c4000)
+
 ### 4.查看远程仓库的名字
-&emsp;默认是origin  --默认就好
+&emsp;默认是origin  -->如果关联了github的仓库->远程库的名称叫github     如果关联了码云的仓库->远程库的名称叫gitee
 ```
 git remote
 ```
@@ -65,19 +89,19 @@ git reset --hard commit_id
 
 - 如何查看commitID？
   - 查看提交历史
-```
+ ```
 git log --pretty=oneline
-```
-
+ ```
   - 查看命令历史
-```
+ ```
 git reflog
-```
+ ```
 
 ### 8.提交到远程仓库
 &emsp;push几个命令的差别 from [水木神州10](https://www.cnblogs.com/zhouj850/p/7260558.html)
 ```
-git push origin master|你需要提交的分支
+git remote    //查看远程仓库名
+git push 仓库名(origin) master|你需要提交的分支
 ```
 
 ## 9.使用分支
