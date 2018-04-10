@@ -1,5 +1,6 @@
   # git_excample
-记录git如何使用的实验仓库
+git使用记录
+- [git使用前介绍](https://github.com/fishhello/git_excample/blob/master/introduction.md)
 
 # Git可以完成的两件事
 **版本控制** :heavy_plus_sign: **多人协作开发**
