@@ -1,3 +1,6 @@
+
+[TOC]
+
 &emsp;本地仓库的使用
 
 ### 1.生成本地的公钥
@@ -19,25 +22,56 @@ git init
 ```
 
 ### 4.查看远程仓库的名字
-&emsp;默认是origin  --提交代码时需要指定仓库提交
+&emsp;默认是origin  --默认就好
 ```
 git remote
 ```
 
 ### 5.跟踪修改的文件(添加进暂存区)
 ```
-git add xxx(文件)
+git add xxx(文件1) xxx(文件2)
 ```
 
-### 6.查看文件的状态
+### 6.查看文件的状态--忘记命令就先打这个看看再说
 &emsp;modified--对原来的文件进行过修改的、untracked--新写的文件没添加到暂存区的
 ```
 git status
 ```
 
 ### 7.提交到本地仓库
+&emsp;每commit一次提交到本地仓库都可以当添加了一个新的版本,也会生成一个唯一的commit_id绑定当前的commit(实现版本回退)
 ```
-git commit -m "填写本次提交的说明"
+git commit [file] -m "填写本次提交的说明"
+```
+
+### 撤销操作
+&emsp;HEAD表示本地仓库中的最新版本
+
+- 从暂存区中撤销
+```
+git reset HEAD file
+```
+
+- 撤销对工作区文件的修改
+```
+git checkout -- file
+```
+
+- 版本回退--更改本地仓库
+&emsp;HEAD表示当前的版本(最新一次的commit),上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100
+```
+git reset --hard commit_id
+```
+
+- 如何查看commitID？
+  - 查看提交历史
+```
+git log --pretty=oneline
+```
+
+  - 查看命令历史
+```
+git reflog
 ```
 
 ### 8.提交到远程仓库
