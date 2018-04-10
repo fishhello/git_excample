@@ -12,7 +12,8 @@
 ### 1.生成本地的公钥
 ```
 //一路回车
-ssh-keygen -t rsa -C "2874497884@qq.com"
+cd ~
+ssh-keygen -t rsa
 ```
 
 ### 2.设置一个邮箱和用户名--在github中显示代码的上传者
