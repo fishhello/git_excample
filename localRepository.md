@@ -39,7 +39,7 @@ git init -bare
 git clone https://github.com/fishhello/git_excample.git
 ```
 
-- 使用remote关联远程仓库
+- 使用remote关联远程仓库(需要先创建git init)
 ```
 git remote add github git@github.com:fishhello/git_excample.git
 ```
