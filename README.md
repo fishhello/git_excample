@@ -1,18 +1,20 @@
-  # git_excample
-git使用记录
+# git_excample
+git使用记录(:chestnut:github)
 - [git使用前介绍](https://github.com/fishhello/git_excample/blob/master/introduction.md)
 
 # Git可以完成的两件事
-**版本控制[^1]**:heavy_plus_sign:**多人协作开发**
+**版本控制、代码托管**:heavy_plus_sign:**多人协作开发**
 
-&emsp;Git 是一个管理你的「代码的历史记录」的工具
+&emsp;Git 是一个版本控制「代码的修改记录」的工具，**记录** 对文件的增删改查
 
 - [本地仓库的使用](https://github.com/fishhello/git_excample/blob/master/localRepository.md)
 - [多人协作](https://github.com/fishhello/git_excample/blob/master/collaboration.md)
 - [遇到的问题](https://github.com/fishhello/git_excample/blob/master/tosolve.md)
 
-REF:
-[知乎:怎样使用 GitHub？](https://www.zhihu.com/question/20070065/answer/16021641)
-[Git教程之一个团队如何在github上协作开发](https://blog.csdn.net/gpwner/article/details/53140016)
+----
 
-[^1]: 能自动记录每次文件的改动，还可以同事协作编辑，这样就不用自己管理一堆类似的文件了，也不需要把文件传来传去
+`REF:`
+
+[git--everything-is-local](https://git-scm.com/book/zh/v2)
+
+[廖雪峰git](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
