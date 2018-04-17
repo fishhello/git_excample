@@ -13,3 +13,9 @@ git remote set-url origin git+ssh://git@github.com/username/reponame.git
 ```
 git config --global core.quotepath false
 ```
+
+### 3.git pull:fatal: refusing to merge unrelated histories
+&emsp;[xx](https://stackoverflow.com/questions/37937984/git-refusing-to-merge-unrelated-histories-on-rebase)
+```java
+git pull origin master --allow-unrelated-histories
+```
